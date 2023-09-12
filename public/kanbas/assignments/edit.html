@@ -1,0 +1,156 @@
+<body>
+
+    <table>
+        <tr>
+            <td>
+                <ul>
+                    <li><a href="#">Account</a></li>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Courses</a></li>
+                    <li><a href="#">Calendar</a></li>
+                    <li><a href="#">Inbox</a></li>
+                    <li><a href="#">History</a></li>
+                    <li><a href="#">Studio</a></li>
+                    <li><a href="#">Commons</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Modules</a></li>
+                    <li><a href="#">Piazza</a></li>
+                    <li><a href="#">Zoom Meetings</a></li>
+                    <li><a href="#">Assignments</a></li>
+                    <li><a href="#">Quizzes</a></li>
+                    <li><a href="#">Grades</a></li>
+                    <li><a href="#">People</a></li>
+                    <li><a href="#">Panopto Video</a></li>
+                    <li><a href="#">Discussions</a></li>
+                    <li><a href="#">Announcements</a></li>
+                    <li><a href="#">Pages</a></li>
+                    <li><a href="#">Files</a></li>
+                    <li><a href="#">Rubrics</a></li>
+                    <li><a href="#">Outcomes</a></li>
+                    <li><a href="#">Collaborations</a></li>
+                    <li><a href="#">Syllabus</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </td>
+            <td>
+                <select>
+                    <option value="EDIT" >Edit</option>
+                    <option value="SPEED GRADER" selected>Speed Grader</option>
+                    <option value="Duplicate">Duplicate</option>
+                    <option value="Delete">Delete</option>
+                    <option value="Move To">Move To...</option>
+                    <option value="Send To">Send To...</option>
+                    <option value="Copy To">Copy To...</option>
+                    <option value="Share to Commons">Share to Commons</option>
+                </select>
+
+                <hr>
+
+                <h3> Assignment Name </h3>
+                
+                <p>
+                    <form id="textarea">
+                        <textarea cols="25" rows="2">This is the assignment description. </textarea>
+                     </form>
+                </p>
+                <p>
+                    <label>Points</label> <br>
+                    <input placeholder="100"/>
+                </p>
+                <p>
+                    <label>Assignment Group</label> <br>
+                    <select>
+                        <option value="ASSIGNMENTS"> ASSIGNMENTS</option>
+                        <option value="QUIZZES"> QUIZZES</option>
+                        <option value="EXAMS"> EXAMS</option>
+                        <option value="PROJECT"> PROJECT</option>
+                    </select>
+                </p>
+                <p>
+                    <label>Display Grade as</label> <br>
+                    <select>
+                        <option value="PERCENTAGE" selected> Percentage</option>
+                        <option value="LETTER"> Letter</option>
+                    </select>
+                </p>
+                <p>
+                    <label>Submission Type</label> <br>
+                    <select>
+                        <option value="ONLINE" selected> Online</option>
+                        <option value="IN-PERSON"> In-Person</option>
+                    </select>
+                </p>
+                <p>
+                    <label>Online Entry Options</label><br/>
+                    <input type="checkbox" value="TEXT-ENTRY"
+                        name="entry-option" id="text-entry"/>
+                    <label for="text-entry">Text Entry</label>    <br/>
+                    <input type="checkbox" value="WEBSITE-URL"
+                        name="entry-option" id="website-url"/>
+                    <label for="website-url">Website URL</label>    <br/>
+                    <input type="checkbox" value="MEDIA-RECORDINGS"
+                        name="entry-option" id="media-recordings"/>
+                    <label for="media-recordings">Media Recordings</label> <br/>
+                    <input type="checkbox" value="STUDENT-ANNOTATION"
+                        name="entry-option" id="student-annotation"/>
+                    <label for="student-annotation">Student Annotation</label>    <br/>
+                    <input type="checkbox" value="FILE-UPLOADS"
+                        name="entry-option" id="file-uploads"/>
+                    <label for="file-uploads">File Uploads</label>
+                </p>
+
+                <p>
+                    <label>Submission Attempts</label> <br>
+                    <select>
+                        <option value="UNLIMITED" selected> Unlimited</option>
+                        <option value="3"> 3</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label>Plagiarism Review</label> <br>
+                    <select>
+                        <option value="None" selected> None</option>
+                        <option value="Yes"> Yes</option>
+                    </select>
+                </p>
+                <p>
+                    <label>Group Assignment</label><br/>
+                    <input type="checkbox" value="YES"
+                        name="group-assignment" id="group-assignment"/>
+                    <label for="group-assignment">This is a group assignment</label>    <br/>
+                </p>
+                <p>
+                    <label>Peer Reviews</label><br/>
+                    <input type="checkbox" value="YES"
+                        name="peer-review" id="peer-review"/>
+                    <label for="peer-review">Require Peer Reviews</label>    <br/>
+                </p>
+                <p>
+                    <label>Assign</label><br/>
+                    <label>Assign to</label><br/>
+                    <input placeholder="Everyone"/>
+                </p>
+                <p>
+                    <label>Due</label><br/>
+                    <input type="date" placeholder="01/01/2021"/>
+                </p>
+                <p>
+                    <label>Available from</label><br/>
+                    <input type="date" placeholder="01/01/2021"/>
+                </p>
+                <p>
+                    <label>Until</label><br/>
+                    <input type="date" placeholder="01/01/2021"/>
+                </p>
+
+                <button>Cancel</button><button>Save</button>
+            </td>
+
+
+</body>
