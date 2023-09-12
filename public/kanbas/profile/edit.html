@@ -2,7 +2,7 @@
 
     <table>
         <tr>
-            <td>
+            <td valign="top">
                 <ul>
                     <li><a href="#">Account</a></li>
                     <li><a href="#">Dashboard</a></li>
@@ -15,7 +15,7 @@
                     <li><a href="#">Help</a></li>
                 </ul>
             </td>
-            <td>
+            <td valign="top">
                 <ul>
                     <li><a href="#">Notifications</a></li>
                     <li><a href="#">Profile</a></li>
@@ -28,7 +28,7 @@
                     <li><a href="#">Global Announcements</a></li>
                 </ul>
             </td>
-            <td>
+            <td valign="top">
                 <h3>Jose Annunziato</h3>
                 <form>
 
@@ -60,15 +60,26 @@
                     <ul>
                         <li><a href="#">YouTube Links to an external site</a></li>
                     </ul>
-
-                    <h5>Title</h5> <h5>URL</h5>
-
-                    <input placeholder="YouTube"/> &rarr; <input placeholder="https://www.youtube.com"/> <a href="#"> Remove </a> <br>
-
-                    <button>Add another link</button> <br>
-                    <button>Cancel</button><button>Save Profile</button> <br>
-                    <button>Edit Profile</button><button>Cancel Editing</button>
-
+                    <div>
+                        <label for="Title">Title</label> <label for="Link">URL</label>
+                    </div>
+                    
+                    <div>
+                        <input id="Title" placeholder="YouTube"/> &rarr; <input id="Link" placeholder="https://www.youtube.com"/> <a href="#"> Remove </a>
+                    </div>
+                    <div>
+                        <button>Add another link</button> 
+                    </div>
+                    <div>
+                        <button>Cancel</button>
+                        <button>Save Profile</button>
+                    </div>
+                    <div>
+                        <button>Edit Profile</button>
+                        <button>Cancel Editing</button>
+                    </div>
                 </form>
-                
             </td>
+        </tr>
+    </table>
+</body>
