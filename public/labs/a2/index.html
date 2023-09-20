@@ -111,25 +111,177 @@
    </div>
 
    <h2>Margins</h2>
-<div class="wd-margin-bottom 
-            wd-padded-top-left 
-            wd-border-fat border-red 
-            wd-border-solid 
-            wd-bg-color-yellow">
-   Margin bottom</div>
-<div class="wd-margin-right-left 
-            wd-padded-bottom-right 
-            wd-border-fat border-blue 
-            wd-border-solid 
-            wd-bg-color-yellow">
-   Margin left right
+   <div class="wd-margin-bottom 
+               wd-padded-top-left 
+               wd-border-fat 
+               wd-border-red 
+               wd-border-solid 
+               wd-bg-color-yellow">
+      Margin bottom</div>
+   <div class="wd-margin-right-left 
+               wd-padded-bottom-right 
+               wd-border-fat 
+               wd-border-blue 
+               wd-border-solid 
+               wd-bg-color-yellow">
+      Margin left right
+   </div>
+   <div class="wd-margin-all-around 
+               wd-padding-fat border-fat 
+               wd-border-yellow 
+               wd-border-solid 
+               wd-bg-color-blue 
+               wd-fg-color-white">
+      Margin all around
+   </div>
+
+   <h3>Rounded corners</h3>
+<p class="wd-rounded-corners-top wd-border-thin wd-border-blue wd-border-solid wd-padding-fat">
+  Rounded corners on the top
+</p>
+<p class="wd-rounded-corners-bottom wd-border-thin wd-border-blue wd-border-solid wd-padding-fat">
+  Rounded corners at the bottom
+</p>
+<p class="wd-rounded-corners-all-around wd-border-thin wd-border-blue wd-border-solid wd-padding-fat">
+  Rounded corners all around
+</p>
+<p class="wd-rounded-corners-inline wd-border-thin wd-border-blue wd-border-solid wd-padding-fat">
+  Different rounded corners
+</p>
+
+<h2>Dimension</h2>
+<div>
+   <div class="wd-dimension-portrait wd-bg-color-yellow">
+       Portrait
+   </div>
+   <div class="wd-dimension-landscape wd-bg-color-blue
+               wd-fg-color-white">
+       Landscape
+   </div>
+   <div class="wd-dimension-square wd-bg-color-red">
+       Square
+   </div>
 </div>
-<div class="wd-margin-all-around 
-            wd-padding-fat border-fat 
-            wd-border-yellow 
-            wd-border-solid 
+
+<h2>Position</h2>
+<h3>Relative</h3>
+<div>
+ <div class="wd-bg-color-yellow 
+             wd-dimension-portrait">
+  <div class="wd-pos-relative-nudge-down-right">
+       Portrait</div>
+ </div>
+ <div class="wd-pos-relative-nudge-up-right 
+             wd-bg-color-blue wd-fg-color-white 
+             wd-dimension-landscape">
+       Landscape</div>
+ <div class="wd-bg-color-red wd-dimension-square">
+       Square</div>
+</div>
+
+<h3>Absolute position</h3>
+<div class="wd-pos-relative">
+   <div class="wd-pos-absolute-10-10 
+    wd-bg-color-yellow wd-dimension-portrait">
+       Portrait
+   </div>
+   <div class="wd-pos-absolute-50-50 
+        wd-bg-color-blue wd-fg-color-white 
+        wd-dimension-landscape">
+       Landscape   </div>
+   <div class="wd-pos-absolute-120-20 
+        wd-bg-color-red wd-dimension-square">
+       Square      </div>
+</div><br/><br/><br/><br/><br/><br/><br/>
+
+<h3>Fixed position</h3>
+
+  Checkout the blue square that says 
+  "Fixed position" stuck all the way 
+  on the right and half way down the 
+  page. It doesn't scroll with the 
+  rest of the page. Its position is 
+  "Fixed".
+
+<div class="wd-pos-fixed 
+            wd-dimension-square 
             wd-bg-color-blue 
             wd-fg-color-white">
-   Margin all around
+  Fixed position
 </div>
+<h2>Z index</h2>
+<div class="wd-pos-relative">
+   <div class="wd-pos-absolute-10-10 
+        wd-bg-color-yellow 
+        wd-dimension-portrait">
+        Portrait</div>
+   <div class="wd-zindex-bring-to-front 
+        wd-pos-absolute-50-50 
+        wd-bg-color-blue wd-fg-color-white 
+        wd-dimension-landscape">
+        Landscape</div>
+   <div class="wd-pos-absolute-120-20 
+        wd-bg-color-red wd-dimension-square">
+        Square</div>
+</div><br/><br/><br/><br/><br/><br/><br/>
+<h2>Float</h2>
+<div>
+   <div class="wd-float-left wd-dimension-portrait wd-bg-color-yellow">
+        Yellow</div>
+   <div class="wd-float-left wd-dimension-portrait wd-bg-color-blue wd-fg-color-white">
+        Blue</div>
+   <div class="wd-float-left wd-dimension-portrait wd-bg-color-red">
+        Red</div>
+   <img class="wd-float-right"      src="https://www.staradvertiser.com/wp-content/uploads/2021/08/web1_Starship-gap2.jpg"/>
+   <div class="wd-float-done"></div>
+</div>
+
+<h2>Grid layout</h2>
+<div class="wd-grid-row">
+  <div class="wd-grid-col-half-page wd-bg-color-yellow">
+    <h3>Left half</h3>
+  </div>
+  <div class="wd-grid-col-half-page wd-bg-color-blue
+              wd-fg-color-white">
+    <h3>Right half</h3>
+  </div>
+</div>
+<div class="wd-grid-row">
+    <div class="wd-grid-col-third-page wd-bg-color-green
+                wd-fg-color-white">
+      <h3>Left third</h3>
+    </div>
+    <div class="wd-grid-col-two-thirds-page wd-bg-color-red
+                wd-fg-color-white">
+      <h3>Right two thirds</h3>
+    </div>
+  </div>
+  <div class="wd-grid-row">
+    <div class="wd-grid-col-left-sidebar wd-bg-color-yellow">
+      <h3>Side bar</h3>
+      <p>This is the left sidebar</p>
+    </div>
+    <div class="wd-grid-col-main-content wd-bg-color-blue
+                wd-fg-color-white">
+      <h3>Main content</h3>
+      <p>This is the main content. This is the main content.
+         This is the main content. </p>
+    </div>
+    <div class="wd-grid-col-right-sidebar wd-bg-color-green
+                wd-fg-color-white">
+      <h3>Side bar</h3>
+      <p>This is the right sidebar</p>
+    </div>
+  </div>
+  <h2>Flex</h2>
+    <div class="wd-flex-row-container">
+    <div class="wd-bg-color-yellow wd-width-75px">
+        Column 1
+    </div>
+    <div class="wd-bg-color-blue">Column 2</div>
+    <div class="wd-bg-color-red wd-flex-grow-1">
+        Column 3
+    </div>
+    </div>
+
 </html>
