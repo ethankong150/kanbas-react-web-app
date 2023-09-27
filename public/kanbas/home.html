@@ -1,25 +1,70 @@
 <body>
-    <link href="C:\Users\ethan\2023\fall\webdev\kanbas-react-web-app\public\vendors\fontawesome\fontawesome-free-5.15.4-web\css\all.css" rel="stylesheet"/>
-        <i class="fa-regular fa-circle-user" style="color: #0f0f0f;"></i>
+    <head>
+        <link
+        href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.2/css/all.css"
+        rel="stylesheet"/>
+
+        <style>
+            .sidebar {
+                background-color: black;
+                width: 80px; /* You can adjust this width as needed */
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                color: white;
+            }
+    
+            /* .sidebar ul {
+                list-style-type: none;
+                padding: 0;
+            }
+    
+            .sidebar li {
+                margin: 5px 0;
+            } */
+    
+            .sidebar a {
+                text-decoration: none;
+                color: white;
+                padding: 5px 10px;
+                display: block;
+            }
+    
+            .account-icon {
+                color: white;
+            }
+    
+            .active-link {
+                background-color: white;
+                color: red;
+            }
+        </style>
+    </head>
     <table>
         <tr>
             <td valign="top">
-                <ul>
-                    <li>
-                        <a href="./profile/index.html">
-                            <i class="fa-regular fa-circle-user" style="color: #0f0f0f;"></i>
-                          Account
-                        </a>
-                    </li>
-                    <li><a href="#">Dashboard</a></li>
-                    <li><a href=".\home.html">Courses</a></li>
-                    <li><a href="#">Calendar</a></li>
-                    <li><a href="#">Inbox</a></li>
-                    <li><a href="#">History</a></li>
-                    <li><a href="#">Studio</a></li>
-                    <li><a href="#">Commons</a></li>
-                    <li><a href="#">Help</a></li>
-                </ul>
+                <div class="sidebar"> 
+                    <ul>
+                        <li>
+                            <a href="./profile/index.html">
+                                <i class="fa fa-circle-user account-icon" style="color: #ffffff;"></i>
+                            Account
+                            </a>
+                        </li>
+                        <li><a href="#">Dashboard</a></li>
+                        <li><a href=".\home.html">Courses</a></li>
+                        <li><a href="#">Calendar</a></li>
+                        <li><a href="#">Inbox</a></li>
+                        <li><a href="#">History</a></li>
+                        <li><a href="#">Studio</a></li>
+                        <li><a href="#">Commons</a></li>
+                        <li><a href="#">Help</a></li>
+                    </ul>
+                </div>
             </td>
             <td valign="top">
                 <ul>
