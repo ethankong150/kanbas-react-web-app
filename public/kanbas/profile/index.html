@@ -1,55 +1,224 @@
-<body>
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.2/css/all.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: Arial, sans-serif;
+                background-color: #ffffff; /* Set background color */
+            }   
+            .sidebar {
+                background-color: #000000;
+                width: 75px;
+                position: fixed;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                color: white;
+                z-index: 1;
+            }    
+            .sidebar ul {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+            }   
+            .sidebar li {
+                margin: 0px 0;
+            }
+            .sidebar a {
+                text-decoration: none;
+                color: white;
+                display: flex; /* Use flexbox for centering */
+                flex-direction: column;
+                align-items: center; /* Center horizontally */
+                justify-content: center; /* Center vertically */
+                padding: 10px 0; /* Increase padding for better clickability */
+                font-size: 14px;
+            }
+            .sidebar-2 a {
+                width: 100px;
+                text-decoration: none;
+                color: rgb(255, 0, 0);
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: left;
+                padding: 10px 0;
+                font-size: 14px;
+                white-space: normal; 
+            }
+            .sidebar-2 ul {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+            }
+            .sidebar-2-selected {
+                color: black !important;
+                margin-left:8px
+            }
+            .vertical-line {
+                width: 1px;
+                height: 15px; 
+                background-color: black; 
+            }
+            .account-icon {
+                color: white;
+            }   
+            .active-link {
+                background-color: #f8f8f8;
+                color: red !important; 
+            }   
+            .main-content {
+                margin-left: 80px;
+                padding: 10px;
+                background-color: white;
+            }   
+            button, select {
+                margin: 5px;
+                padding: 10px;
+                background-color: #cc0000; 
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            .week {
+                margin-bottom: 10px;
+            }
+            .sub-item {
+                margin-left: 20px;
+                margin-top: 5px;
+            }
+            body {
+                font-family: 'Roboto', sans-serif;
+            }
+            .word-container {
+            display: flex; 
+            align-items: center; 
+            }
+            .link-style {
+                text-decoration: none;
+                color: red;
+            }
 
-    <table>
-        <tr>
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td valign="top" >
+                    <div class="sidebar"> 
+                        <ul>
+                            <li>
+                                <img src="../neu_symbol.png" width="75" height="50">
+                            </li>
+                            <li>
+                                <a href="#" class="active-link">
+                                    <i class="fa fa-user" aria-hidden="true" style="color: grey"></i>
+                                    Account
+                                </a>
+                            </li>
+                            <li><a href="#">
+                                <div>
+                                    <i class="fa-solid fa-gauge" style="color: #ff0000;"></i>
+                                </div>
+                                Dashboard</a></li>
+                            <li><a href="..\home.html">
+                                <div>
+                                    <i class="fa-solid fa-book" style="color: #ff0000;"></i>
+                                </div>
+                                Courses</a></li>
+                            <li><a href="#">
+                                <div>
+                                    <i class="fa-solid fa-calendar-days" style="color: #ff0000;"></i>
+                                </div>
+                                Calendar</a></li>
+                            <li><a href="#">
+                                <div>
+                                    <i class="fa-solid fa-inbox" style="color: #ff0000;"></i>
+                                </div>
+                                Inbox</a></li>
+                            <li><a href="#">
+                                <div>
+                                    <i class="fa-regular fa-clock" style="color: #ff0000;"></i>
+                                </div>
+                                History</a></li>
+                            <li><a href="#">
+                                <div>
+                                    <i class="fa-solid fa-display" style="color: #ff0000;"></i>
+                                </div>
+                                Studio</a></li>
+                            <li><a href="#">
+                                <div>
+                                    <i class="fa-solid fa-arrow-right-from-bracket" style="color: #ff0000;"></i>
+                                </div>
+                                Commons</a></li>
+                            <li><a href="#">
+                                <div>
+                                    <i class="fa-regular fa-circle-question" style="color: #ff0000;"></i>
+                                </div>
+                                Help</a></li>
+                        </ul>
+                    </div>
+                </td>
             <td valign="top">
-                <ul>
-                    <li><a href=".\index.html">Account</a></li>
-                    <li><a href="#">Dashboard</a></li>
-                    <li><a href="..\home.html">Courses</a></li>
-                    <li><a href="#">Calendar</a></li>
-                    <li><a href="#">Inbox</a></li>
-                    <li><a href="#">History</a></li>
-                    <li><a href="#">Studio</a></li>
-                    <li><a href="#">Commons</a></li>
-                    <li><a href="#">Help</a></li>
-                </ul>
-            </td>
-            <td valign="top">
-                <ul>
-                    <li><a href="#">Notifications</a></li>
-                    <li><a href="./index.html">Profile</a></li>
-                    <li><a href="#">Files</a></li>
-                    <li><a href="#">Settings</a></li>
-                    <li><a href="#">ePortfolios</a></li>
-                    <li><a href="#">Shared Content</a></li>
-                    <li><a href="#">The Hub</a></li>
-                    <li><a href="#">Qwickly Course Tools</a></li>
-                    <li><a href="#">Global Announcements</a></li>
-                </ul>
-            </td>
-            <td valign="top">
-                <ul>
+                <div class="main-content sidebar-2">
                     <h5>Jose Annunziato's Profile</h5>
-                    <hr>
-                    <h3>Jose Annunziato </h3><button  onclick="window.location.href='\edit.html';"> Edit Profile </button>
-
-                    <h4>Contact</h4>
+                        <hr>
+                    <ul>
+                        <li><a href="#">Notifications</a></li>
+                        <li>
+                            <div class="word-container">
+                                <div class="vertical-line"></div>
+                                <a href="./index.html" class="sidebar-2-selected">
+                                    Profile
+                                </a>
+                            </div>
+                        </li>
+                        <li><a href="#">Files</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <li><a href="#">ePortfolios</a></li>
+                        <li><a href="#">Shared Content</a></li>
+                        <li><a href="#">The Hub</a></li>
+                        <li><a href="#">Qwickly Course Tools</a></li>
+                        <li><a href="#">Global Announcements</a></li>
+                    </ul>
+                </div>
+            </td>
+            <td valign="top">
+                <ul>
+                    <i class="fa-regular fa-circle-user fa-10x"></i>
+                    <h2>Jose Annunziato </h2>
+                    
+                    <h3>Contact</h3>
                     <p>
-                        No Registered services, you can add some on the <a href="#">settings</a> page
+                        No Registered services, you can add <br>some on the <a class="link-style" href="#">settings</a> page
                     </p>
 
-                    <h4>
+                    <h3>
                         Biography
-                    </h4>
+                    </h3>
                     <p>
-                        Faculty, Software Engineer, AI, Space, and renewable enthusiast.
+                        Faculty, Software Engineer, AI, Space, <br>and renewable enthusiast.
                     </p>
 
-                    <h4>Links</h4>
-                    <p><a href="Youtube.com">YouTube</a></p>
+                    <h3>Links</h3>
+                    <p><a class="link-style" href="Youtube.com">YouTube</a></p>
                 </ul>
+            </td>
+            <td valign="top">
+                <div class="float-end"><button style="background-color: rgb(204, 204, 204); color: rgb(42, 42, 42); margin-top:60px" onclick="window.location.href='\edit.html';"><i class="fa fa-pencil" aria-hidden="true"></i>
+                    Edit Profile </button></div><br>
+                
             </td>
         </tr>
     </table>
-</body>
+
+</html>

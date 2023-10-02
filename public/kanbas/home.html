@@ -2,6 +2,7 @@
 <html>
 <head>
     <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.2/css/all.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
@@ -11,8 +12,8 @@
         }
 
         .sidebar {
-            background-color: #1c1c1c;
-            width: 80px;
+            background-color: #000000;
+            width: 75px;
             position: fixed;
             left: 0;
             top: 0;
@@ -98,6 +99,10 @@
             margin-left: 20px;
             margin-top: 5px;
         }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
     </style>
 </head>
 <body>
@@ -107,8 +112,11 @@
                 <div class="sidebar"> 
                     <ul>
                         <li>
-                            <a href="./profile/index.html" class="active-link">
-                                <i class="fa fa-circle-user account-icon"></i>
+                            <img src="./neu_symbol.png" width="75" height="50">
+                        </li>
+                        <li>
+                            <a href="./profile/index.html">
+                                <i class="fa fa-user" aria-hidden="true" style="color: grey"></i>
                                 Account
                             </a>
                         </li>
@@ -156,29 +164,27 @@
                 </div>
             </td>
             <td valign="top">
-                <div class="main-content">
-                    <div class="sidebar-2">
-                        <ul>
-                            <li><a href=".\home.html">Home</a></li>
-                            <li><a href="#">Modules</a></li>
-                            <li><a href="#">Piazza</a></li>
-                            <li><a href="#">Zoom Meetings</a></li>
-                            <li><a href=".\assignments\index.html">Assignments</a></li>
-                            <li><a href="#">Quizzes</a></li>
-                            <li><a href=".\grades.html">Grades</a></li>
-                            <li><a href="#">People</a></li>
-                            <li><a href="#">Panopto Video</a></li>
-                            <li><a href="#">Discussions</a></li>
-                            <li><a href="#">Announcements</a></li>
-                            <li><a href="#">Pages</a></li>
-                            <li><a href="#">Files</a></li>
-                            <li><a href="#">Rubrics</a></li>
-                            <li><a href="#">Outcomes</a></li>
-                            <li><a href="#">Collaborations</a></li>
-                            <li><a href="#">Syllabus</a></li>
-                            <li><a href="#">Settings</a></li>
-                        </ul>
-                    </div>
+                <div class="main-content sidebar-2">
+                    <ul>
+                        <li><a href=".\home.html">Home</a></li>
+                        <li><a href="#">Modules</a></li>
+                        <li><a href="#">Piazza</a></li>
+                        <li><a href="#">Zoom Meetings</a></li>
+                        <li><a href=".\assignments\index.html">Assignments</a></li>
+                        <li><a href="#">Quizzes</a></li>
+                        <li><a href=".\grades.html">Grades</a></li>
+                        <li><a href="#">People</a></li>
+                        <li><a href="#">Panopto Video</a></li>
+                        <li><a href="#">Discussions</a></li>
+                        <li><a href="#">Announcements</a></li>
+                        <li><a href="#">Pages</a></li>
+                        <li><a href="#">Files</a></li>
+                        <li><a href="#">Rubrics</a></li>
+                        <li><a href="#">Outcomes</a></li>
+                        <li><a href="#">Collaborations</a></li>
+                        <li><a href="#">Syllabus</a></li>
+                        <li><a href="#">Settings</a></li>
+                    </ul>
                 </div>
                 
             </td>
