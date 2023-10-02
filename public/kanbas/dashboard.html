@@ -69,7 +69,7 @@
         }
 
         .active-link {
-            background-color: #f8f8f8; /* Highlight active link */
+            background-color: #ffffff; /* Highlight active link */
             color: red !important; /* Ensure text color is set to red */
         }
 
@@ -106,9 +106,8 @@
         }
 
         .duotone-card {
-            background: linear-gradient(180deg, red 50%, white 50%);
-            color: #000;
-            padding: 20px; 
+            width: 250px;
+            background: linear-gradient(180deg, rgb(237, 4, 4) 50%, white 50%);
         }
     </style>
 </head>
@@ -174,12 +173,12 @@
         <div class="main-content">
             <h2> Dashboard </h2>
             <hr>
-            <h3>Published Courses</h3>
-                    <hr>
+            <h3 style="margin-left:50px">Published Courses (8)</h3>
+            <hr>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3 duo">
-                        <div class="card">
+                    <div class="col-md-3">
+                        <div class="card duotone-card">
                             <div class="card-body">
                                 <h3 class="card-title">Chart 1</h3>
                                 <canvas id="chart1"></canvas>
@@ -187,7 +186,7 @@
                         </div>
                     </div>
                     <div class="col-md-3">
-                        <div class="card">
+                        <div class="card duotone-card">
                             <div class="card-body">
                                 <h3 class="card-title">Chart 2</h3>
                                 <canvas id="chart2"></canvas>
@@ -195,7 +194,7 @@
                         </div>
                     </div>
                     <div class="col-md-3">
-                        <div class="card">
+                        <div class="card duotone-card">
                             <div class="card-body">
                                 <h3 class="card-title">Chart 3</h3>
                                 <canvas id="chart3"></canvas>
@@ -203,7 +202,7 @@
                         </div>
                     </div>
                     <div class="col-md-3">
-                        <div class="card">
+                        <div class="card duotone-card">
                             <div class="card-body">
                                 <h3 class="card-title">Chart 4</h3>
                                 <canvas id="chart4"></canvas>
@@ -211,9 +210,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row" style="margin-top: 10px">
                     <div class="col-md-3">
-                        <div class="card">
+                        <div class="card duotone-card">
                             <div class="card-body">
                                 <h3 class="card-title">Chart 2_1</h3>
                                 <canvas id="chart2_1"></canvas>
@@ -221,7 +220,7 @@
                         </div>
                     </div>
                     <div class="col-md-3">
-                        <div class="card">
+                        <div class="card duotone-card">
                             <div class="card-body">
                                 <h3 class="card-title">Chart 2_2</h3>
                                 <canvas id="chart2_2"></canvas>
@@ -229,7 +228,7 @@
                         </div>
                     </div>
                     <div class="col-md-3">
-                        <div class="card">
+                        <div class="card duotone-card">
                             <div class="card-body">
                                 <h3 class="card-title">Chart 2_3</h3>
                                 <canvas id="chart2_3"></canvas>
@@ -237,7 +236,7 @@
                         </div>
                     </div>
                     <div class="col-md-3">
-                        <div class="card">
+                        <div class="card duotone-card">
                             <div class="card-body">
                                 <h3 class="card-title">Chart 2_4</h3>
                                 <canvas id="chart2_4"></canvas>
