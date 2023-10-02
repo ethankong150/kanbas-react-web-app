@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.2/css/all.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff; /* Set background color */
+        }
+
+        .sidebar {
+            background-color: #000000;
+            width: 75px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            color: white;
+            z-index: 1;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar li {
+            margin: 0px 0;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: white;
+            display: flex; /* Use flexbox for centering */
+            flex-direction: column;
+            align-items: center; /* Center horizontally */
+            justify-content: center; /* Center vertically */
+            padding: 10px 0; /* Increase padding for better clickability */
+            font-size: 14px;
+        }
+
+        .sidebar-2 a {
+            text-decoration: none;
+            color: rgb(255, 0, 0);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Align text to the left */
+            justify-content: center;
+            padding: 10px 0;
+            font-size: 14px;
+        }
+
+        .sidebar-2 ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .account-icon {
+            color: white;
+        }
+
+        .active-link {
+            background-color: #f8f8f8; /* Highlight active link */
+            color: red !important; /* Ensure text color is set to red */
+        }
+
+
+        .main-content {
+            margin-left: 80px;
+            padding: 10px;
+            background-color: white; /* Set background color for content */
+            /* border-radius: 10px; Add rounded corners to content */
+            /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); Add a subtle shadow */
+        }
+
+        button, select {
+            margin: 5px;
+            padding: 10px;
+            background-color: #cc0000; /* Set button background color */
+            color: white; /* Set button text color */
+            border: none; /* Remove border */
+            border-radius: 5px; /* Add rounded corners to buttons */
+            cursor: pointer;
+        }
+
+        .week {
+            margin-bottom: 10px;
+        }
+
+        .sub-item {
+            margin-left: 20px;
+            margin-top: 5px;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .duotone-card {
+            background: linear-gradient(180deg, red 50%, white 50%);
+            color: #000;
+            padding: 20px; 
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td valign="top" >
+                <div class="sidebar"> 
+                    <ul>
+                        <li>
+                            <img src="./neu_symbol.png" width="75" height="50">
+                        </li>
+                        <li>
+                            <a href="./profile/index.html">
+                                <i class="fa fa-user" aria-hidden="true" style="color: grey"></i>
+                                Account
+                            </a>
+                        </li>
+                        <li><a class="active-link" href="#">
+                            <div>
+                                <i class="fa-solid fa-gauge" style="color: #ff0000;"></i>
+                            </div>
+                            Dashboard</a></li>
+                        <li><a href=".\home.html">
+                            <div>
+                                <i class="fa-solid fa-book" style="color: #ff0000;"></i>
+                            </div>
+                            Courses</a></li>
+                        <li><a href="#">
+                            <div>
+                                <i class="fa-solid fa-calendar-days" style="color: #ff0000;"></i>
+                            </div>
+                            Calendar</a></li>
+                        <li><a href="#">
+                            <div>
+                                <i class="fa-solid fa-inbox" style="color: #ff0000;"></i>
+                            </div>
+                            Inbox</a></li>
+                        <li><a href="#">
+                            <div>
+                                <i class="fa-regular fa-clock" style="color: #ff0000;"></i>
+                            </div>
+                            History</a></li>
+                        <li><a href="#">
+                            <div>
+                                <i class="fa-solid fa-display" style="color: #ff0000;"></i>
+                            </div>
+                            Studio</a></li>
+                        <li><a href="#">
+                            <div>
+                                <i class="fa-solid fa-arrow-right-from-bracket" style="color: #ff0000;"></i>
+                            </div>
+                            Commons</a></li>
+                        <li><a href="#">
+                            <div>
+                                <i class="fa-regular fa-circle-question" style="color: #ff0000;"></i>
+                            </div>
+                            Help</a></li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <div class="main-content">
+            <h2> Dashboard </h2>
+            <hr>
+            <h3>Published Courses</h3>
+                    <hr>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 duo">
+                        <div class="card">
+                            <div class="card-body">
+                                <h3 class="card-title">Chart 1</h3>
+                                <canvas id="chart1"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h3 class="card-title">Chart 2</h3>
+                                <canvas id="chart2"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h3 class="card-title">Chart 3</h3>
+                                <canvas id="chart3"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h3 class="card-title">Chart 4</h3>
+                                <canvas id="chart4"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h3 class="card-title">Chart 2_1</h3>
+                                <canvas id="chart2_1"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h3 class="card-title">Chart 2_2</h3>
+                                <canvas id="chart2_2"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h3 class="card-title">Chart 2_3</h3>
+                                <canvas id="chart2_3"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h3 class="card-title">Chart 2_4</h3>
+                                <canvas id="chart2_4"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </table>
+</body>
+</html>
