@@ -6,8 +6,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.17.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.min.js"></script>
-
     <style>
         body {
             margin: 0;
@@ -230,7 +231,7 @@
                                 <i class="fa-solid fa-gauge" style="color: #ff0000;"></i>
                             </div>
                             Dashboard</a></li>
-                        <li><a href=".\home.html">
+                        <li><a class="active-link" href=".\home.html">
                             <div>
                                 <i class="fa-solid fa-book" style="color: #ff0000;"></i>
                             </div>
@@ -271,7 +272,7 @@
             <div class="breadcrumb" style="margin-left: 73px;">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item" style="list-style-type: none;"> <i class="fa-solid fa-bars" style="color: #ff0000;"></i> <a style="color: red; text-decoration: none; margin-left:20px"href="#">CS4550.12631.202410</a> > Home</li>
+                        <li class="breadcrumb-item" style="list-style-type: none;"> <i class="fa-solid fa-bars" style="color: #ff0000;"></i> <a style="color: red; text-decoration: none; margin-left:20px; margin-right:10px;"href="#">CS4550.12631.202410</a> > <span style="margin-left:10px;"> Home </span></li>
                     </ol>
                 </nav>
             </div>            
@@ -303,22 +304,23 @@
                         <li><a href="#">Settings</a></li>
                     </ul>
                 </div>
-                
             </td>
             <td valign="top" class="hide-third-column" style="width: 65%; padding-right: 10px;">
-                <div style="margin-left: 560px;">
+                <div style="margin-left: 45%;">
                     <button class="rectangular-button" type="button">Collapse All</button>    
                     <button class="rectangular-button" type="button">View Progress</button>
-                    <div class="dropdown" style="display: inline-block;"> <!-- Added inline-block style -->
-                        <button class="btn btn-secondary dropdown-toggle rectangular-button" style="background-color: rgb(240, 240, 240);" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Dropdown button
+                    <div class="dropdown" style="display: inline-block;">
+                        <button class="btn btn-secondary dropdown-toggle rectangular-button" style="background-color: rgb(240, 240, 240);" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa fa-check-circle" style="color: green;"></i>
+                            Publish All
                         </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Publish All</a></li>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <li><a class="dropdown-item selected" href="#">Publish All</a></li>
                             <li><a class="dropdown-item" href="#">Publish Some</a></li>
                             <li><a class="dropdown-item" href="#">Don't publish</a></li>
                         </ul>
                     </div>
+                    
                     <button type="button" style="width: 90; height: 30px; padding: 3px 20px; border-radius: 2px;" class="btn btn-danger"><i class="fa fa-plus" style="color:white" aria-hidden="true"></i> Module</button> 
                     <button style="margin-left: 0px; border-width: 1px; padding:2px 5px; display: inline-block;"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
                 </div>
