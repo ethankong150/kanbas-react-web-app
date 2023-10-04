@@ -1,114 +1,438 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.2/css/all.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.17.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff; /* Set background color */
+        }
+
+        .sidebar {
+            background-color: #000000;
+            width: 75px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            color: white;
+            z-index: 1;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar li {
+            margin: 0px 0;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: white;
+            display: flex; /* Use flexbox for centering */
+            flex-direction: column;
+            align-items: center; /* Center horizontally */
+            justify-content: center; /* Center vertically */
+            padding: 10px 0; /* Increase padding for better clickability */
+            font-size: 14px;
+        }
+
+        .sidebar-2 a {
+            text-decoration: none;
+            color: rgb(255, 0, 0);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Align text to the left */
+            justify-content: center;
+            padding: 10px 0;
+            font-size: 14px;
+        }
+
+        .sidebar-2 ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .sidebar-2-selected {
+            color: black !important;
+            margin-left:8px
+        }
+        .account-icon {
+            color: white;
+        }
+
+        .active-link {
+            background-color: #ffffff; /* Highlight active link */
+            color: red !important; /* Ensure text color is set to red */
+        }
+
+
+        .main-content {
+            margin-left: 80px;
+            padding: 10px;
+            background-color: white; /* Set background color for content */
+            /* border-radius: 10px; Add rounded corners to content */
+            /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); Add a subtle shadow */
+        }
+        .week {
+            margin-bottom: 10px;
+        }
+        .vertical-line {
+                width: 1px;
+                height: 15px; 
+                background-color: black; 
+        }
+        .word-container {
+            display: flex; 
+            align-items: center; 
+        }
+        .breadcrumb {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 10px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+        }
+
+        .week {
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        .sub-item {
+            margin-left: 20px;
+            margin-top: 5px;
+        }
+
+        .sub-item a {
+            text-decoration: none;
+            color: #337ab7;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .list-group {
+            margin-top:0px;
+            margin-bottom: 0px;
+            border-radius: 0px;
+            /* padding-left: 40px; /* Adjust as needed */
+            /* padding-right: 40px; */ 
+        }
+        .list-group-item {
+            margin-bottom: 0px;
+            border-radius: 0px;
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+        .sub-item {
+            margin-bottom: 0px;
+            border-radius: 0px;
+        }
+        .rectangular-button {
+            padding: 5px 10px; /* Adjust padding as needed for button size */
+            color: #000000; /* Text color */
+            border: none; /* Remove default button border */
+            border-radius: 2px; /* Rounded corners */
+            cursor: pointer; /* Add a pointer cursor on hover */
+            font-size: 16px; /* Font size */
+        }
+        .outer {
+            list-style: none;
+            padding: 0;
+        }   
+
+        .status-bar {
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 2px;
+            margin-bottom: 0px;
+            padding: 5px;
+        }
+        .list-container {
+        max-width: 250px;
+        }
+
+        .coming-up-list {
+        list-style: none;
+        padding: 0;
+    }
+
+    .coming-up-item {
+        border: none;
+        margin-bottom: 10px;
+        padding: 10px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .coming-up-link {
+        text-decoration: none;
+        color: #ff0000;
+    }
+    /* Media query to hide the fourth column */
+    @media (max-width: 1200px) {
+            .hide-fourth-column {
+                display: none;
+        }
+    }
+
+    /* Media query to hide the third column */
+    @media (max-width: 992px) {
+        .hide-third-column {
+            display: none;
+        }
+    }
+
+    /* Media query to hide the second column */
+    @media (max-width: 768px) {
+        .hide-second-column {
+            display: none;
+        }
+    }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            border: none;
+            padding: 0;
+            margin: 0;
+        }
+
+    </style>
+</head>
 <body>
     <table>
         <tr>
-            <td valign="top">
-                <ul>
-                    <li><a href="./profile/index.html">Account</a></li>
-                    <li><a href="./dashboard.html">Dashboard</a></li>
-                    <li><a href="./home.html">Courses</a></li>
-                    <li><a href="#">Calendar</a></li>
-                    <li><a href="#">Inbox</a></li>
-                    <li><a href="#">History</a></li>
-                    <li><a href="#">Studio</a></li>
-                    <li><a href="#">Commons</a></li>
-                    <li><a href="#">Help</a></li>
-                </ul>
+            <td valign="top" style="padding: 0px;
+            text-align: left;">
+                <div class="sidebar"> 
+                    <ul>
+                        <li>
+                            <img src="./neu_symbol.png" width="75" height="50">
+                        </li>
+                        <li>
+                            <a href="./profile/index.html">
+                                <i class="fa fa-user" aria-hidden="true" style="color: grey"></i>
+                                Account
+                            </a>
+                        </li>
+                        <li><a href="./dashboard.html">
+                            <div>
+                                <i class="fa-solid fa-gauge" style="color: #ff0000;"></i>
+                            </div>
+                            Dashboard</a></li>
+                        <li><a class="active-link" href=".\home.html">
+                            <div>
+                                <i class="fa-solid fa-book" style="color: #ff0000;"></i>
+                            </div>
+                            Courses</a></li>
+                        <li><a href="#">
+                            <div>
+                                <i class="fa-solid fa-calendar-days" style="color: #ff0000;"></i>
+                            </div>
+                            Calendar</a></li>
+                        <li><a href="#">
+                            <div>
+                                <i class="fa-solid fa-inbox" style="color: #ff0000;"></i>
+                            </div>
+                            Inbox</a></li>
+                        <li><a href="#">
+                            <div>
+                                <i class="fa-regular fa-clock" style="color: #ff0000;"></i>
+                            </div>
+                            History</a></li>
+                        <li><a href="#">
+                            <div>
+                                <i class="fa-solid fa-display" style="color: #ff0000;"></i>
+                            </div>
+                            Studio</a></li>
+                        <li><a href="#">
+                            <div>
+                                <i class="fa-solid fa-arrow-right-from-bracket" style="color: #ff0000;"></i>
+                            </div>
+                            Commons</a></li>
+                        <li><a href="#">
+                            <div>
+                                <i class="fa-regular fa-circle-question" style="color: #ff0000;"></i>
+                            </div>
+                            Help</a></li>
+                    </ul>
+                </div>
             </td>
-            <td valign="top">
-                <ul>
-                    <li><a href=".\home.html">Home</a></li>
-                    <li><a href="#">Modules</a></li>
-                    <li><a href="#">Piazza</a></li>
-                    <li><a href="#">Zoom Meetings</a></li>
-                    <li><a href=".\assignments\index.html">Assignments</a></li>
-                    <li><a href="#">Quizzes</a></li>
-                    <li><a href=".\grades.html">Grades</a></li>
-                    <li><a href="#">People</a></li>
-                    <li><a href="#">Panopto Video</a></li>
-                    <li><a href="#">Discussions</a></li>
-                    <li><a href="#">Announcements</a></li>
-                    <li><a href="#">Pages</a></li>
-                    <li><a href="#">Files</a></li>
-                    <li><a href="#">Rubrics</a></li>
-                    <li><a href="#">Outcomes</a></li>
-                    <li><a href="#">Collaborations</a></li>
-                    <li><a href="#">Syllabus</a></li>
-                    <li><a href="#">Settings</a></li>
-                </ul>
-            </td>
-            <td valign="top">
-                <select>
+            <div class="breadcrumb" style="margin-left: 5%;">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item" style="list-style-type: none;"> <i class="fa-solid fa-bars" style="color: #ff0000;"></i> <a style="color: red; text-decoration: none; margin-left:20px; margin-right:10px;"href="#">CS4550.12631.202410</a> > <span style="margin-left:10px;"> Grades </span></li>
+                    </ol>
+                </nav>
+            </div>            
+            <td valign="top" class="hide-second-column" style="padding: 0px;
+            text-align: left;">
+                <div class="main-content sidebar-2">
+                    <ul>
+                        <li><a href="./home.html">Home</a></li>
+                        <li><a href="#">Modules</a></li>
+                        <li><a href="#">Piazza</a></li>
+                        <li><a href="#">Zoom Meetings</a></li>
+                        <li><a href=".\assignments\index.html">Assignments</a></li>
+                        <li><a href="#">Quizzes</a></li>
+                        <li>
+                            <div class="word-container">
+                                <div class="vertical-line"></div>
+                                <a href=".\grades.html" class="sidebar-2-selected">Grades</a>
+                            </div>
+                        </li>
+                        <li><a href="#">People</a></li>
+                        <li><a href="#">Panopto Video</a></li>
+                        <li><a href="#">Discussions</a></li>
+                        <li><a href="#">Announcements</a></li>
+                        <li><a href="#">Pages</a></li>
+                        <li><a href="#">Files</a></li>
+                        <li><a href="#">Rubrics</a></li>
+                        <li><a href="#">Outcomes</a></li>
+                        <li><a href="#">Collaborations</a></li>
+                        <li><a href="#">Syllabus</a></li>
+                        <li><a href="#">Settings</a></li>
+                    </ul>
+                </div>
+            </td>            
+            <td valign="top" class="hide-third-column" style="width:88%; padding: 0px;
+            text-align: left;">
+                <div>
+                    <select>
                     <option value="VAL1"selected>Gradebook</option>
                     <option value="VAL2" >
                         Option 2</option>
                     <option value="VAL3">Option 3</option>
                  </select>
-                 <button type="button">Import</button>
-                 <select>
-                    <option value="VAL1"selected>Export</option>
-                    <option value="VAL2" >
-                        Option 2</option>
-                    <option value="VAL3">Option 3</option>
-                 </select>
-                 <button type="button">Configure</button>
+                 <span class="float-right">
+                    <button type="button" class="rectangular-button"><i class="fa-solid fa-file-import"></i> Import</button>
+                    <select class="rectangular-button" style="background-color: rgb(240, 239, 239);">
+                       <option value="VAL1"selected></i> Export</option>
+                       <option value="VAL2" >
+                           Option 2</option>
+                       <option value="VAL3">Option 3</option>
+                    </select>
+                    <button class="rectangular-button"type="button"><i class="fa-solid fa-gear"></i></button>
+                 </span>
+                </div>
+                
 
-                 <p>
-                 <h3>Student Names</h3>
-                </p>
-                 <input placeholder="Search Students"> 
-
-                <p>
-                 <h3>Assignment Names</h3>
-                </p>
-
-                <p>
-                 <input placeholder="Search Assignments"> 
-                </p>
-                <p>
-                 <button type="button">Apply Filters</button>
-                </p>
-                <table border="1" width="100%">
-                    <thead>
-                    <tr>
-                        <th>Student Name</th>
-                        <th><p>A1 SETUP</p><p>Out of 100</p></th>
-                        <th><p>A2 HTML</p><p>Out of 100</p></th>
-                        <th><p>A3 CSS</p><p>Out of 100</p></th>
-                        <th><p>A4 BOOSTRAP</p><p>Out of 100</p></th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>Alice Wonderland</td>
-                        <td><input value="60"></td>
-                        <td><input value="70"></td>
-                        <td><input value="85"></td>
-                        <td><input value="90"></td>
-                    </tr>
-                    <tr>
-                        <td>Princess Leia</td>
-                        <td><input value="90"></td>
-                        <td><input value="90"></td>
-                        <td><input value="90"></td>
-                        <td><input value="90"></td>
-                    </tr>
-                    <tr>
-                        <td>Me</td>
-                        <td><input value="100"></td>
-                        <td><input value="100"></td>
-                        <td><input value="100"></td>
-                        <td><input value="100"></td>
-                    </tr>
-                    <tr>
-                        <td>You</td>
-                        <td><input value="0"></td> 
-                        <td><input value="0"></td>
-                        <td><input value="0"></td>
-                        <td><input value="0"></td>
-                    </tr>
-                    </tbody>
-                 </table>
-
+                <div class="container" style="margin-top: 30px">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <h4>Student Names</h4>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-append">
+                                    <span class="input-group-text" style="background-color: white; border-right: none">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </span>
+                                  </div>
+                                <input type="text" class="form-control" placeholder="Search" style="border-left: none; border-right: none; border-top: thin solid; border-bottom: thin solid; color:rgb(215, 215, 215)">
+                                <div class="input-group-append">
+                                  <span class="input-group-text" style="background-color: white; border-left: none">
+                                    <i class="fa-solid fa-caret-down"></i>
+                                  </span>
+                                </div>
+                              </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <h4>Assignment Names</h4>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-append">
+                                    <span class="input-group-text" style="background-color: white; border-right: none">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </span>
+                                  </div>
+                                <input type="text" class="form-control" placeholder="Search Assignments" style="border-left: none; border-right: none; border-top: thin solid; border-bottom: thin solid; color:rgb(215, 215, 215)">
+                                <div class="input-group-append">
+                                  <span class="input-group-text" style="background-color: white; border-left: none">
+                                    <i class="fa-solid fa-caret-down"></i>
+                                  </span>
+                                </div>
+                              </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row" style="margin-top: 10px;">
+                        <div class="col-md-6">
+                            <button type="button" class="rectangular-button"> <i class="fa fa-light fa-filter"></i> Apply Filters</button>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 30px">
+                        <div class="col-md-12">
+                            <table border="1" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th style="background-color: rgb(237, 237, 237); width: 200px;"><span style="margin-left: 10px">Student Name</span></th>
+                                        <th><div style="background-color: rgb(237, 237, 237);"> <span style="margin-left: 10px;">A1 SETUP</span></div><div style="background-color: rgb(237, 237, 237);"><span style="margin-left: 10px">Out of 100</span></div></th>
+                                        <th><div style="background-color: rgb(237, 237, 237);"> <span style="margin-left: 10px;">A2 HTML</span></div><div style="background-color: rgb(237, 237, 237);"><span style="margin-left: 10px">Out of 100</span></div></th>
+                                        <th><div style="background-color: rgb(237, 237, 237);"><span style="margin-left: 10px;">A3 CSS</span></div><div style="background-color: rgb(237, 237, 237);"><span style="margin-left: 10px">Out of 100</span></div></th>
+                                        <th><div style="background-color: rgb(237, 237, 237);"><span style="margin-left: 10px;">A4 BOOTSTRAP</span></div><div style="background-color: rgb(237, 237, 237);"><span style="margin-left: 10px">Out of 100</span></div></th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td> <a href="#" class="coming-up-link" style="margin-left: 10px"> Alice Wonderland </a></td>
+                                            <td><input type="text" style="text-align: center;" value="60"></td>
+                                            <td><input type="text" style="text-align: center;" value="70"></td>
+                                            <td><input type="text" style="text-align: center;" value="85"></td>
+                                            <td><input type="text" style="text-align: center;" value="90"></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="background-color: rgb(237, 237, 237);"> <a href="#" class="coming-up-link" style="margin-left: 10px">Princess Leia</a></td>
+                                            <td><input type="text" style="text-align: center;" value="90"></td>
+                                            <td><input type="text" style="text-align: center;" value="90"></td>
+                                            <td><input type="text" style="text-align: center;" value="90"></td>
+                                            <td><input type="text" style="text-align: center;" value="90"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="#" class="coming-up-link" style="margin-left: 10px">Me</a></td>
+                                            <td><input type="text" style="text-align: center;" value="100"></td>
+                                            <td><input type="text" style="text-align: center;" value="100"></td>
+                                            <td><input type="text" style="text-align: center;" value="100"></td>
+                                            <td><input type="text" style="text-align: center;" value="100"></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="background-color: rgb(237, 237, 237);"><a href="#" class="coming-up-link" style="margin-left: 10px">You</a></td>
+                                            <td><input type="text" style="text-align: center;" value="0"></td> 
+                                            <td><input type="text" style="text-align: center;" value="0"></td>
+                                            <td><input type="text" style="text-align: center;" value="0"></td>
+                                            <td><input type="text" style="text-align: center;" value="0"></td>
+                                        </tr>
+                                        
+                                    </tbody>
+                             </table>
+            
+                        </div>
+                    </div>
+                </div>
             </td>
         </tr>
     </table>
