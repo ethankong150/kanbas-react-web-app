@@ -106,6 +106,7 @@
         }
 
         .duotone-card {
+            height: 250px;
             width: 250px;
             background: linear-gradient(180deg, rgb(237, 4, 4) 50%, white 50%);
         }
@@ -127,25 +128,34 @@
                             </a>
                         </li>
                         <li><a class="active-link" href="#">
-                            <div>
                                 <i class="fa-solid fa-gauge" style="color: #ff0000;"></i>
-                            </div>
-                            Dashboard</a></li>
-                        <li><a href=".\home.html">
-                            <div>
-                                <i class="fa-solid fa-book" style="color: #ff0000;"></i>
-                            </div>
-                            Courses</a></li>
-                        <li><a href="#">
-                            <div>
-                                <i class="fa-solid fa-calendar-days" style="color: #ff0000;"></i>
-                            </div>
-                            Calendar</a></li>
-                        <li><a href="#">
-                            <div>
-                                <i class="fa-solid fa-inbox" style="color: #ff0000;"></i>
-                            </div>
-                            Inbox</a></li>
+                            Dashboard
+                            </a>
+                        </li>
+                        <li>
+                            <a href=".\home.html">
+                                <div>
+                                    <i class="fa-solid fa-book" style="color: #ff0000;"></i>
+                                </div>
+                                Courses
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa-solid fa-calendar-days" style="color: #ff0000;"></i>
+                                </div>
+                            Calendar
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa-solid fa-inbox" style="color: #ff0000;"></i>
+                                </div>
+                            Inbox
+                            </a>
+                        </li>
                         <li><a href="#">
                             <div>
                                 <i class="fa-regular fa-clock" style="color: #ff0000;"></i>
@@ -176,74 +186,133 @@
             <h3 style="margin-left:50px">Published Courses (8)</h3>
             <hr>
             <div class="container">
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="card duotone-card">
+                <div class="d-flex flex-row flex-wrap">
+                    <div class="row">
+                        <div class="card duotone-card" style="margin-right: 30px; margin-bottom: 30px;">
                             <div class="card-body">
-                                <h3 class="card-title">Chart 1</h3>
-                                <canvas id="chart1"></canvas>
+                                <h3 class="card-title"><i class="fa-solid fa-ellipsis-vertical" style="color: #ffffff; margin-left: 200px"></i></h3>
+                                <div style="margin-top:80px;">
+                                    <a href="#" style="font-size: 12px;"> CS 4530 12621 Web Development </a>
+                                    <div style="font-size: 12px; color: grey">
+                                        CS4530.12631.202410
+                                    </div>
+                                    <div style="font-size: 12px; color: grey">
+                                        202410_1 Fall 2023 Semester Full Term
+                                    </div>
+                                    <i style="margin-top:10px" class="fa-solid fa-pen-to-square"></i>
+                                </div>
+                                
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card duotone-card">
+                        <div class="card duotone-card" style="margin-right: 30px; margin-bottom: 30px;">
                             <div class="card-body">
-                                <h3 class="card-title">Chart 2</h3>
-                                <canvas id="chart2"></canvas>
+                                <h3 class="card-title"><i class="fa-solid fa-ellipsis-vertical" style="color: #ffffff; margin-left: 200px"></i></h3>
+                                <div style="margin-top:80px;">
+                                    <a href="#" style="font-size: 12px;"> CS 4550 Fundamentals of Software Engineering </a>
+                                    <div style="font-size: 12px; color: grey">
+                                        CS4550.12631.202410
+                                    </div>
+                                    <div style="font-size: 12px; color: grey">
+                                        202410_1 Fall 2023 Semester Full Term
+                                    </div>
+                                    <i style="margin-top:10px" class="fa-solid fa-pen-to-square"></i>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card duotone-card">
+                        
+                        <div class="card duotone-card" style="margin-right: 30px; margin-bottom: 30px;">
                             <div class="card-body">
-                                <h3 class="card-title">Chart 3</h3>
-                                <canvas id="chart3"></canvas>
+                                <h3 class="card-title"><i class="fa-solid fa-ellipsis-vertical" style="color: #ffffff; margin-left: 200px"></i></h3>
+                                <div style="margin-top:80px;">
+                                    <a href="#" style="font-size: 12px;"> DS4400 Data Mining and Machine Learning I </a>
+                                    <div style="font-size: 12px; color: grey">
+                                        DS4400.12631.202410
+                                    </div>
+                                    <div style="font-size: 12px; color: grey">
+                                        202410_1 Fall 2023 Semester Full Term
+                                    </div>
+                                    <i style="margin-top:10px" class="fa-solid fa-pen-to-square"></i>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card duotone-card">
+                        <div class="card duotone-card" style="margin-right: 30px; margin-bottom: 30px;">
                             <div class="card-body">
-                                <h3 class="card-title">Chart 4</h3>
-                                <canvas id="chart4"></canvas>
+                                <h3 class="card-title"><i class="fa-solid fa-ellipsis-vertical" style="color: #ffffff; margin-left: 200px"></i></h3>
+                                <div style="margin-top:80px;">
+                                    <a href="#" style="font-size: 12px;"> ENGW1103 Advanced Writing </a>
+                                    <div style="font-size: 12px; color: grey">
+                                        ENGW1103.12631.202410
+                                    </div>
+                                    <div style="font-size: 12px; color: grey">
+                                        202410_1 Fall 2023 Semester Full Term
+                                    </div>
+                                    <i style="margin-top:10px" class="fa-solid fa-pen-to-square"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card duotone-card" style="margin-right: 30px; margin-bottom: 30px;">
+                            <div class="card-body">
+                                <h3 class="card-title"><i class="fa-solid fa-ellipsis-vertical" style="color: #ffffff; margin-left: 200px"></i></h3>
+                                <div style="margin-top:80px;">
+                                    <a href="#" style="font-size: 12px;"> CS3500 Object-oriented Design </a>
+                                    <div style="font-size: 12px; color: grey">
+                                        CS3500.12631.202410
+                                    </div>
+                                    <div style="font-size: 12px; color: grey">
+                                        202410_1 Fall 2023 Semester Full Term
+                                    </div>
+                                    <i style="margin-top:10px" class="fa-solid fa-pen-to-square"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card duotone-card" style="margin-right: 30px; margin-bottom: 30px;">
+                            <div class="card-body">
+                                <h3 class="card-title"><i class="fa-solid fa-ellipsis-vertical" style="color: #ffffff; margin-left: 200px"></i></h3>
+                                <div style="margin-top:80px;">
+                                    <a href="#" style="font-size: 12px;"> CS4100 Intro to Artificial Intelligence </a>
+                                    <div style="font-size: 12px; color: grey">
+                                        CS4100.12631.202410
+                                    </div>
+                                    <div style="font-size: 12px; color: grey">
+                                        202410_1 Fall 2023 Semester Full Term
+                                    </div>
+                                    <i style="margin-top:10px" class="fa-solid fa-pen-to-square"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card duotone-card" style="margin-right: 30px; margin-bottom: 30px;">
+                            <div class="card-body">
+                                <h3 class="card-title"><i class="fa-solid fa-ellipsis-vertical" style="color: #ffffff; margin-left: 200px"></i></h3>
+                                <div style="margin-top:80px;">
+                                    <a href="#" style= "font-size: 12px;"> CS3000 Algorithms </a>
+                                    <div style="font-size: 12px; color: grey">
+                                        CS3000.12631.202410
+                                    </div>
+                                    <div style="font-size: 12px; color: grey">
+                                        202410_1 Fall 2023 Semester Full Term
+                                    </div>
+                                    <i style="margin-top:10px" class="fa-solid fa-pen-to-square"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card duotone-card" style="margin-right: 30px; margin-bottom: 30px;">
+                            <div class="card-body">
+                                <h3 class="card-title"><i class="fa-solid fa-ellipsis-vertical" style="color: #ffffff; margin-left: 200px"></i></h3>
+                                <div style="margin-top:80px;">
+                                    <a href="#" style="font-size: 12px;"> CS3650 Computer Systems </a>
+                                    <div style="font-size: 12px; color: grey">
+                                        CS3650.12631.202410
+                                    </div>
+                                    <div style="font-size: 12px; color: grey">
+                                        202410_1 Fall 2023 Semester Full Term
+                                    </div>
+                                    <i style="margin-top:10px" class="fa-solid fa-pen-to-square"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row" style="margin-top: 10px">
-                    <div class="col-md-3">
-                        <div class="card duotone-card">
-                            <div class="card-body">
-                                <h3 class="card-title">Chart 2_1</h3>
-                                <canvas id="chart2_1"></canvas>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card duotone-card">
-                            <div class="card-body">
-                                <h3 class="card-title">Chart 2_2</h3>
-                                <canvas id="chart2_2"></canvas>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card duotone-card">
-                            <div class="card-body">
-                                <h3 class="card-title">Chart 2_3</h3>
-                                <canvas id="chart2_3"></canvas>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card duotone-card">
-                            <div class="card-body">
-                                <h3 class="card-title">Chart 2_4</h3>
-                                <canvas id="chart2_4"></canvas>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            </div>
         </div>
     </table>
 </body>
