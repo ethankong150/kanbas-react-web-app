@@ -1,9 +1,12 @@
 import Assignment3 from './a3';
+import Nav from "../Nav";
+
 
 function Labs() {
     return(
        <div className="container">
-          <Assignment3/>
+         <Nav/>
+         <Assignment3/>
        </div>
     );
  }
