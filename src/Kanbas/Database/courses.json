@@ -1,0 +1,29 @@
+[
+    { "_id": "RS101",
+      "name": "Rocket Propulsion", "number": "RS4550", "startDate": "2023-01-10",
+      "endDate": "2023-05-15"
+    },
+    { "_id": "RS102",
+      "name": "Aerodynamics", "number": "RS4560", "startDate": "2023-01-10", "endDate": "2023-05-15"
+    },
+    { "_id": "RS103",
+      "name": "Spacecraft Design", "number": "RS4570", "startDate": "2023-01-10", "endDate": "2023-05-15"
+    },
+    { "_id": "RS104",
+      "name": "Rocket Fuel", "number": "RS4800", "startDate": "2023-01-10",
+      "endDate": "2023-05-15"
+    },
+    { "_id": "RS105",
+      "name": "Synthetic Rocket Fuel", "number": "RS4850", "startDate": "2023-01-10",
+      "endDate": "2023-05-15"
+    },
+    { "_id": "RS106",
+      "name": "Rocket Materials", "number": "RS1000", "startDate": "2023-01-10",
+      "endDate": "2023-05-15"
+    },
+    { "_id": "RS107",
+      "name": "Rocket Future", "number": "RS3000", "startDate": "2023-01-10",
+      "endDate": "2023-05-15"
+    }
+  ]
+  
