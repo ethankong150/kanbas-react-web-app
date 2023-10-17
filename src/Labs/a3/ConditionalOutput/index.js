@@ -2,7 +2,7 @@ import React from "react";
 import ConditionalOutputIfElse
   from "./ConditionalOutputIfElse";
 import ConditionalOutputInline
-  from "./ConditionalOutputInline";
+  from "./ConditionalOutputInLine";
 const ConditionalOutput = () => {
  return(
    <>

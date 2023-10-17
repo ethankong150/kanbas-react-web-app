@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* Set background color */
+}
+
+.account-icon {
+    color: white;
+}
+
+.active-link {
+    background-color: #ffffff; /* Highlight active link */
+    color: red !important; /* Ensure text color is set to red */
+}
+
+
+.main-content {
+    margin-left: 80px;
+    padding: 10px;
+    background-color: white; /* Set background color for content */
+    /* border-radius: 10px; Add rounded corners to content */
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); Add a subtle shadow */
+}
+
+button, select {
+    margin: 5px;
+    padding: 10px;
+    background-color: #cc0000; /* Set button background color */
+    color: white; /* Set button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add rounded corners to buttons */
+    cursor: pointer;
+}
+
+.week {
+    margin-bottom: 10px;
+}
+
+.sub-item {
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.duotone-card {
+    height: 200px;
+    width: 250px;
+    background: linear-gradient(180deg, rgb(237, 4, 4) 50%, white 50%) !important;
+}
+

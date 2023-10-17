@@ -1,81 +1,88 @@
+import React from 'react';
 import { Link, useLocation } from "react-router-dom";
-import { faUser, faGauge, faBook, faCalendar, faInbox, faClock, faDisplay, faArrowRightFromBracket } from '@fortawesome/free-solid-svg-icons';
-import { faCircleQuestion } from '@fortawesome/free-regular-svg-icons';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser, faGauge, faBook, faCalendar, faInbox, faClock, faDisplay, faArrowRightFromBracket, faCircleQuestion } from '@fortawesome/free-solid-svg-icons';
+import './sidebar.css'
+import neuSymbol from '../Images/neu_symbol.png';
 
 function KanbasNavigation() {
-  // const links = ["Account", "Dashboard", "Courses", "Calendar", "Inbox", "History", "Studio", "Commons", "Help"];
   const linkData = [
     {
       name: "Account",
-      path: "account", // The path corresponding to this link
-      icon: "fa fa-user", // Font Awesome class for the icon
-      iconColor: "grey", // Color for the icon
+      path: "account",
+      icon: faUser,
+      iconColor: "grey",
     },
     {
       name: "Dashboard",
       path: "dashboard",
-      icon: "fa-solid fa-gauge",
+      icon: faGauge,
       iconColor: "#ff0000",
     },
     {
       name: "Courses",
       path: "courses",
-      icon: "fa-solid fa-book",
+      icon: faBook,
       iconColor: "#ff0000",
     },
     {
       name: "Calendar",
       path: "calendar",
-      icon: "fa-solid fa-calendar",
+      icon: faCalendar,
       iconColor: "#ff0000",
     },
     {
       name: "Inbox",
       path: "#",
-      icon: "fa-solid fa-inbox",
+      icon: faInbox,
       iconColor: "#ff0000",
     },
     {
       name: "History",
       path: "#",
-      icon: "fa-solid fa-clock",
+      icon: faClock,
       iconColor: "#ff0000",
     },
     {
       name: "Studio",
       path: "#",
-      icon: "fa-solid fa-display",
+      icon: faDisplay,
       iconColor: "#ff0000",
     },
     {
       name: "Commons",
       path: "#",
-      icon: "fa-solid fa-arrow-right-from-bracket",
+      icon: faArrowRightFromBracket,
       iconColor: "#ff0000",
     },
     {
       name: "Help",
       path: "#",
-      icon: "fa-regular fa-circle-question",
+      icon: faCircleQuestion,
       iconColor: "#ff0000",
     }
-    
   ];
+
   const { pathname } = useLocation();
 
   return (
-    <div className="list-group" style={{ width: 150 }}>
+    <div className="list-group sidebar" style={{borderRadius: '0px'}}>
+      <img src={neuSymbol} width="75" height="50" alt="NEU Symbol" style={{ display: 'block', margin: '10px auto'}}/>
       {linkData.map((data, index) => (
         <Link
           key={index}
           to={`/Kanbas/${data.path}`}
           className={`list-group-item ${pathname.includes(data.path) && "active"}`}
-        >
-          <div>
-            <i className={`${data.icon}`} style={{ color: data.iconColor }}></i>
+          style={{ height: '70px',
+          borderRadius: '1px', border:'none', 
+          backgroundColor: 'black' , marginTop: '-1px', marginLeft: '-1px', color:'white'}}>
+          <div style={{display:'flex', justifyContent: 'center', alignItems: 'center', width: '100%' }}>
+            <FontAwesomeIcon icon={data.icon} style={{color: data.iconColor}} />
+            
           </div>
-          {data.name}
+          <div style={{display:'flex', justifyContent: 'center', alignItems: 'center', width: '100%' }}>
+            {data.name}
+          </div>
         </Link>
       ))}
     </div>

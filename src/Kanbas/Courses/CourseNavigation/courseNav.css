@@ -1,0 +1,81 @@
+
+
+
+.sidebar-2 a {
+    text-decoration: none;
+    color: rgb(255, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align text to the left */
+    justify-content: center;
+    padding: 10px 0;
+    font-size: 16px;
+    margin-left: 20px;
+    padding: 10px;
+}
+
+.sidebar-2 ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.sidebar-2-selected {
+    color: black !important;
+    margin-left:8px
+}
+.account-icon {
+    color: white;
+}
+
+.active-link {
+    background-color: #ffffff; /* Highlight active link */
+    color: red !important; /* Ensure text color is set to red */
+}
+
+.week {
+    margin-bottom: 10px;
+}
+.vertical-line {
+        width: 1px;
+        height: 15px; 
+        background-color: black; 
+}
+.word-container {
+    display: flex; 
+    align-items: center; 
+}
+.breadcrumb {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.week {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.sub-item {
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.sub-item a {
+    text-decoration: none;
+    color: #337ab7;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Media query to hide the second column */
+@media (max-width: 768px) {
+.hide-second-column {
+    display: none;
+    }
+}
