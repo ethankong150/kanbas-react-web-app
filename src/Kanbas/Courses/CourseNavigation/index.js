@@ -13,7 +13,7 @@ function CourseNavigation() {
         {links.map((link, index) => (
             <li key={index}>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
-                    <div className={`${pathname.includes(link) && "vertical-line"}`} style={{ marginLeft: '5px', marginRight: '-25px' }}></div>
+                    <div className={`${pathname.includes(link) && "vertical-line"}`} style={{ marginLeft: '5px', marginRight: '-20px' }}></div>
                     <Link
                         to={`/Kanbas/Courses/${courseId}/${link}`}
                         className={`sidebar-2 ${pathname.includes(link) && "sidebar-2-selected"}`}>

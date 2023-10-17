@@ -1,0 +1,25 @@
+.list-group-item {
+    border-left-color: green;
+    border-left-width: 5px;
+    margin-bottom: 0px;
+    border-radius: 0px;
+    margin-left: -10px;
+    /* margin-right: -11px; */
+    padding-bottom: 10px;
+}
+
+.stretch-right {
+    margin-right: -11px;
+}
+.sub-item {
+    margin-bottom: -11px;
+    border-radius: 0px;
+    margin-left: 0px;
+}
+/* Media query to hide the third column */
+@media (max-width: 992px) {
+.hide-third-column {
+    display: none;
+    }
+}
+
