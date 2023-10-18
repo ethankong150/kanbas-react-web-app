@@ -23,3 +23,12 @@
     }
 }
 
+.rectangular-button {
+    padding: 5px 10px;
+    color: #000000;
+    border: none; 
+    border-radius: 2px;
+    cursor: pointer; 
+    font-size: 16px; 
+}
+

@@ -24,24 +24,24 @@ function Courses() {
     if (pathname.includes("Zoom%20Meetings")) return "Zoom Meetings";
     if (pathname.includes("Quizzes")) return "Quizzes";
     if (pathname.includes("People")) return "People";
-    return "Error"; // Default breadcrumb text
+    return "Error";
   };
   return (
     <div>
-      <div className="breadcrumb" style={{  marginLeft: '1%', width: '94vw', border: 'none', borderRadius: '0px', paddingTop: '20px', paddingBottom: '0px' }}>
+      <div className="breadcrumb" style={{  marginLeft: '0%', width: '94vw', border: 'none', borderRadius: '0px', paddingTop: '20px', paddingBottom: '0px' }}>
 
             <div className="breadcrumb-item" style={{ listStyleType: 'none' }}>
               <FontAwesomeIcon icon={ faBars } style={{color: "red"}} size="xl"/>
               <a style={{ color: 'red', textDecoration: 'none', marginLeft: '20px', marginRight: '10px' }} href="#">{course.number}</a> 
               >
               <span style={{ marginLeft: '10px' }}>{getBreadcrumbText(location.pathname)}</span>
-              <button className="rectangular-button" style={{ marginLeft: '1100px', width: '150px', height: '40px' }}>
+              <button className="rectangular-button" style={{ backgroundColor: "#F2F2F2", marginLeft: '1100px', width: '150px', height: '40px' }}>
               <FontAwesomeIcon icon={ faGlasses } /> Student View
               </button>
             </div>
       </div>
 
-      <h4>Course {course._id}</h4>
+      <h5 style={{marginLeft:"10px"}}>{course._id}</h5>
       <CourseNavigation />
       <div>
         <div className="overflow-y-scroll bottom-0 end-0" style={{marginLeft: "15%", marginTop:"-25%"}}>

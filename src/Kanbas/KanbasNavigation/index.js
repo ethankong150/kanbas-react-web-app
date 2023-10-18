@@ -66,7 +66,7 @@ function KanbasNavigation() {
   const { pathname } = useLocation();
 
   return (
-    <div className="list-group sidebar" style={{borderRadius: '0px'}}>
+    <div className="list-group sidebar" style={{borderRadius: '0px', position: 'fixed' }}>
       <img src={neuSymbol} width="75" height="50" alt="NEU Symbol" style={{ display: 'block', margin: '10px auto'}}/>
       {linkData.map((data, index) => (
         <Link
