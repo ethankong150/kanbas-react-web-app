@@ -13,7 +13,9 @@ function Assignments() {
   return (
     <div>
       <td valign="top" className="hide-third-column" style={{ width: "65%", paddingRight: "10px" }}>
+        
         <div style={{ marginLeft: "35%", marginTop: "20px" }}>
+          <input placeHolder="Search for Assignment"/>
           <button className="rectangular-button" type="button" style={{ backgroundColor: "#F2F2F2" }}>Collapse All</button>
           <button className="rectangular-button" type="button" style={{ backgroundColor: "#F2F2F2" }}>View Progress</button>
           <div className="dropdown" style={{ display: "inline-block" }}>
@@ -27,6 +29,7 @@ function Assignments() {
               <li><a className="dropdown-item" href="#">Don't publish</a></li>
             </ul>
           </div>
+          
           <button type="button" style={{ width: "90", height: "30px", padding: "3px 20px", borderRadius: "2px" }} className="btn btn-danger"><FontAwesomeIcon icon={faPlus} style={{ color: "white" }} aria-hidden="true" /> Assignment</button>
           <button style={{ backgroundColor: "#F2F2F2", color: "black", marginLeft: "0px", borderWidth: "1px", padding: "3px 5px", display: "inline-block", borderRadius: "0px" }}><FontAwesomeIcon icon={faEllipsisVertical} size={'xl'} /></button>
         </div>
