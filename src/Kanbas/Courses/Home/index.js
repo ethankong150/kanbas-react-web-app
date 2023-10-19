@@ -23,23 +23,23 @@ function Home() {
                 </p>
                   <div className="list-container">
                       <ul className="outer">
-                          <li className="status-bar"><a style={{ color: 'black' }} href="#"><FontAwesomeIcon icon={faFileImport} /> Import Existing Content</a></li>
-                          <li className="status-bar"><a style={{ color: 'black' }} href="#"><FontAwesomeIcon icon={faFileExport} /> Import From Commons</a></li>
-                          <li className="status-bar"><a style={{ color: 'black' }} href="#"><FontAwesomeIcon icon={faBullseye} /> Choose Home Page</a></li>
-                          <li className="status-bar"><a style={{ color: 'black' }} href="#"><FontAwesomeIcon icon={faChartSimple} /> View Course Stream</a></li>
-                          <li className="status-bar"><a style={{ color: 'black' }} href="#"><FontAwesomeIcon icon={faBullhorn} /> New Announcement</a></li>
-                          <li className="status-bar"><a style={{ color: 'black' }} href="#"><FontAwesomeIcon icon={faChartSimple} /> New Analytics</a></li>
-                          <li className="status-bar"><a style={{ color: 'black' }} href="#"><FontAwesomeIcon icon={faBell} /> View Course Notifications</a></li>
+                          <li className="status-bar"><a style={{ color: 'black' }} href="./index.js"><FontAwesomeIcon icon={faFileImport} /> Import Existing Content</a></li>
+                          <li className="status-bar"><a style={{ color: 'black' }} href="./index.js"><FontAwesomeIcon icon={faFileExport} /> Import From Commons</a></li>
+                          <li className="status-bar"><a style={{ color: 'black' }} href="./index.js"><FontAwesomeIcon icon={faBullseye} /> Choose Home Page</a></li>
+                          <li className="status-bar"><a style={{ color: 'black' }} href="./index.js"><FontAwesomeIcon icon={faChartSimple} /> View Course Stream</a></li>
+                          <li className="status-bar"><a style={{ color: 'black' }} href="./index.js"><FontAwesomeIcon icon={faBullhorn} /> New Announcement</a></li>
+                          <li className="status-bar"><a style={{ color: 'black' }} href="./index.js"><FontAwesomeIcon icon={faChartSimple} /> New Analytics</a></li>
+                          <li className="status-bar"><a style={{ color: 'black' }} href="./index.js"><FontAwesomeIcon icon={faBell} /> View Course Notifications</a></li>
                       </ul>
                   </div>
                   <h4>To Do</h4>
                   <hr style={{ maxWidth: '300px', marginLeft: '0px' }} />
-                  <h4>Coming Up <a href="#" style={{ fontSize: '14px', marginLeft: '50px', textDecoration: 'none', color: 'red' }}><FontAwesomeIcon icon={faCalendar} style={{ marginRight: '5px' }} /> View Calendar </a></h4>
+                  <h4>Coming Up <a href="./index.js" style={{ fontSize: '14px', marginLeft: '50px', textDecoration: 'none', color: 'red' }}><FontAwesomeIcon icon={faCalendar} style={{ marginRight: '5px' }} /> View Calendar </a></h4>
                   <hr style={{ maxWidth: '300px', marginLeft: '0px' }} />
                   <ul className="coming-up-list">
                       <li className="coming-up-item">
                           <FontAwesomeIcon icon={faCalendar} />
-                          <a href="#" className="coming-up-link">Lecture</a>
+                          <a href="./index.js" className="coming-up-link">Lecture</a>
                           <div style={{ marginLeft: '18px' }}>
                               CS4550.12631.202410
                           </div>
@@ -49,13 +49,13 @@ function Home() {
                       </li>
                       <li className="coming-up-item">
                           <FontAwesomeIcon icon={faCalendar} />
-                          <a href="#" className="coming-up-link">Lecture</a>
+                          <a href="./index.js" className="coming-up-link">Lecture</a>
                           <div style={{ marginLeft: '18px' }}>CS4550.12631.202410</div>
                           <div style={{ marginLeft: '18px' }}>Sep 11 at 11:45am</div>
                       </li>
                       <li className="coming-up-item">
                           <FontAwesomeIcon icon={faCalendar} />
-                          <a href="#" className="coming-up-link">CS5610.06.SP23</a>
+                          <a href="./index.js" className="coming-up-link">CS5610.06.SP23</a>
                           <div style={{ marginLeft: '18px' }} className="event-time">Sep 11 at 6pm</div>
                       </li>
                   </ul>

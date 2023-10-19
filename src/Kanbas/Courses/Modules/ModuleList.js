@@ -22,9 +22,9 @@ function ModuleList() {
                             Publish All
                         </button>
                         <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <li><a className="dropdown-item selected" href="#">Publish All</a></li>
-                            <li><a className="dropdown-item" href="#">Publish Some</a></li>
-                            <li><a className="dropdown-item" href="#">Don't publish</a></li>
+                            <li><a className="dropdown-item selected" href="./ModuleList.js">Publish All</a></li>
+                            <li><a className="dropdown-item" href="./ModuleList.js">Publish Some</a></li>
+                            <li><a className="dropdown-item" href="./ModuleList.js">Don't publish</a></li>
                         </ul>
                     </div>
                     
@@ -50,7 +50,6 @@ function ModuleList() {
                       <FontAwesomeIcon icon={faEllipsisVertical} size={'xl'} />
                       </span>
                     </li>
-                    {/* ... other sub-items ... THIS IS WHERE I INTEGRATE THE REMAINDER OF THE MODULES...???*/}
                   </ul>
                 </li>
             ))

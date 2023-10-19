@@ -32,7 +32,7 @@ function Courses() {
 
             <div className="breadcrumb-item" style={{ listStyleType: 'none' }}>
               <FontAwesomeIcon icon={ faBars } style={{color: "red"}} size="xl"/>
-              <a style={{ color: 'red', textDecoration: 'none', marginLeft: '20px', marginRight: '10px' }} href="#">{course.number}</a> 
+              <a style={{ color: 'red', textDecoration: 'none', marginLeft: '20px', marginRight: '10px' }} href="./index.js">{course.number}</a> 
               >
               <span style={{ marginLeft: '10px' }}>{getBreadcrumbText(location.pathname)}</span>
               <button className="rectangular-button" style={{ backgroundColor: "#F2F2F2", marginLeft: '1100px', width: '150px', height: '40px' }}>
