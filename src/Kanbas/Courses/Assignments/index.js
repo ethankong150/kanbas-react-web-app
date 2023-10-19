@@ -24,9 +24,9 @@ function Assignments() {
               Publish All
             </button>
             <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <li><a className="dropdown-item selected" href="#">Publish All</a></li>
-              <li><a className="dropdown-item" href="#">Publish Some</a></li>
-              <li><a className="dropdown-item" href="#">Don't publish</a></li>
+              <li><a className="dropdown-item selected" href="./index.js">Publish All</a></li>
+              <li><a className="dropdown-item" href="./index.js">Publish Some</a></li>
+              <li><a className="dropdown-item" href="./index.js">Don't publish</a></li>
             </ul>
           </div>
           
