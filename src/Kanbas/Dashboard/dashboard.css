@@ -47,7 +47,7 @@ body {
 }
 
 .duotone-card {
-    height: 200px;
+    height: 250px;
     width: 250px;
     background: linear-gradient(180deg, rgb(237, 4, 4) 50%, white 50%) !important;
 }
