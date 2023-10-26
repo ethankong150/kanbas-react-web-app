@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
-import db from "../../Database";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faCircleCheck, faEllipsisVertical, faPenToSquare } from '@fortawesome/free-solid-svg-icons';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -43,17 +42,20 @@ function ModuleList() {
                 <hr></hr>
         <ul className="list-group">
             <li className="list-group-item">
-            <button onClick={() => dispatch(addModule({ ...module, course: courseId }))}>Add</button>
-            <button onClick={() => dispatch(updateModule(module))}> Update </button>
-            <input value={module.name}
-              onChange={(e) => dispatch(setModule({ ...module, description: e.target.value }))}
-            />
-            <textarea value={module.description}
-              onChange={(e) => setModule({
-                ...module, description: e.target.value })}
-            />
-          </li>
-
+              <div style={{ display: 'flex',  alignItems: 'center', gap: '10px' }}>
+                <button onClick={() => dispatch(addModule({ ...module, course: courseId }))}>Add</button>
+                <button onClick={() => dispatch(updateModule(module))}> Update </button>
+                <input style={{height: "30px"}}
+                  value={module.name}
+                  onChange={(e) => dispatch(setModule({ ...module, name: e.target.value }))}
+                />
+                <textarea 
+                  style={{ height: "30px" }} 
+                  value={module.description}
+                  onChange={(e) => dispatch(setModule({ ...module, description: e.target.value }))}
+                />
+              </div>
+            </li>
           {
             modules
               .filter((module) => module.course === courseId)
