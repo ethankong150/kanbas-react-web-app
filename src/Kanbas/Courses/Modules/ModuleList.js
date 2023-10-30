@@ -21,7 +21,7 @@ function ModuleList() {
   return (
     <div>
       <td valign="top" className="hide-third-column" style={{width: "65%", paddingRight: "10px"}}>
-      <div style={{marginLeft: "43%", marginTop: "20px"}}>
+      <div style={{marginLeft: "43%", marginTop: "6%"}}>
                     <button className="rectangular-button" type="button" style={{backgroundColor: "#F2F2F2"}}>Collapse All</button>    
                     <button className="rectangular-button" type="button" style={{backgroundColor: "#F2F2F2"}}>View Progress</button>
                     <div className="dropdown" style={{display:"inline-block"}}>
