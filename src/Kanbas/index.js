@@ -24,7 +24,6 @@ function Kanbas() {
     name: "New Course",      number: "New Number",
     startDate: "2023-09-10", endDate: "2023-12-15",
   });
-
   const updateCourse = async (course) => {
     const response = await axios.put(
       `${URL}/${course._id}`,

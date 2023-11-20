@@ -21,7 +21,6 @@ function ModuleRoutes(app) {
     db.modules = db.modules.filter((m) => m._id !== mid);
     res.sendStatus(200);
   });
-
   app.put("/api/modules/:mid", (req, res) => {
     const { mid } = req.params;
     const moduleIndex = db.modules.findIndex(

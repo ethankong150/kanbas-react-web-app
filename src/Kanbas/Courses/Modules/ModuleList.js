@@ -31,14 +31,10 @@ function ModuleList() {
       dispatch(deleteModule(moduleId));
     });
   };
-
   const handleUpdateModule = async () => {
     const status = await client.updateModule(module);
     dispatch(updateModule(module));
   };
-
-
-
   useEffect(() => {
     findModulesForCourse(courseId)
       .then((modules) =>
@@ -103,7 +99,7 @@ function ModuleList() {
                     <li className="list-group-item stretch-right">
                       <FontAwesomeIcon icon={faEllipsisVertical} size={'xl'} />
                       <FontAwesomeIcon icon={faEllipsisVertical} size={'xl'} style={{marginRight:"20px"}}/>
-                      <FontAwesomeIcon icon={faPenToSquare} size={'l'} style={{color: 'green', marginRight:"20px"}} />
+                      <FontAwesomeIcon icon={faPenToSquare} size={'lg'} style={{color: 'green', marginRight:"20px"}} />
                       {module.description}
                       <span className="float-end">
                       <FontAwesomeIcon icon={faCircleCheck} style={{color: "#44ff00", marginRight:"10px"}} />
