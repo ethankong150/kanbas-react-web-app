@@ -7,10 +7,22 @@ import AssignmentEditor from "./Assignments/AssignmentEditor";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faGlasses } from '@fortawesome/free-solid-svg-icons';
 import { useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
-function Courses({ courses }) {
+function Courses() {
   const { courseId } = useParams();
-  const course = courses.find((course) => course._id === courseId);
+  const URL = "http://localhost:4000/api/courses";
+  const [course, setCourse] = useState({});
+  const findCourseById = async (courseId) => {
+    const response = await axios.get(
+      `${URL}/${courseId}`
+    );
+    setCourse(response.data);
+  };
+  useEffect(() => {
+    findCourseById(courseId);
+  }, [courseId]);
 
   const location = useLocation();
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faCircleCheck, faEllipsisVertical, faPenToSquare } from '@fortawesome/free-solid-svg-icons';
@@ -10,13 +10,41 @@ import {
   deleteModule,
   updateModule,
   setModule,
+  setModules,
 } from "./modulesReducer";
+import { findModulesForCourse, createModule } from "./client";
+import * as client from "./client";
 
 function ModuleList() {
   const { courseId } = useParams();
   const modules = useSelector((state) => state.modulesReducer.modules);
   const module = useSelector((state) => state.modulesReducer.module);
   const dispatch = useDispatch();
+
+  const handleAddModule = () => {
+    createModule(courseId, module).then((module) => {
+      dispatch(addModule(module));
+    });
+  };
+  const handleDeleteModule = (moduleId) => {
+    client.deleteModule(moduleId).then((status) => {
+      dispatch(deleteModule(moduleId));
+    });
+  };
+
+  const handleUpdateModule = async () => {
+    const status = await client.updateModule(module);
+    dispatch(updateModule(module));
+  };
+
+
+
+  useEffect(() => {
+    findModulesForCourse(courseId)
+      .then((modules) =>
+        dispatch(setModules(modules))
+    );
+  }, [courseId]);
 
   return (
     <div>
@@ -43,8 +71,8 @@ function ModuleList() {
         <ul className="list-group">
             <li className="list-group-item">
               <div style={{ display: 'flex',  alignItems: 'center', gap: '10px' }}>
-                <button onClick={() => dispatch(addModule({ ...module, course: courseId }))}>Add</button>
-                <button onClick={() => dispatch(updateModule(module))}> Update </button>
+                <button onClick={handleAddModule}>Add</button>
+                <button onClick={handleUpdateModule}> Update </button>
                 <input style={{height: "30px"}}
                   value={module.name}
                   onChange={(e) => dispatch(setModule({ ...module, name: e.target.value }))}
@@ -66,7 +94,7 @@ function ModuleList() {
                     Edit
                   </button>
                   <button
-                    onClick={() => dispatch(deleteModule(module._id))}>
+                    onClick={handleDeleteModule(module._id)}>
                     Delete
                   </button>
                 <h4>{module.name}</h4>
