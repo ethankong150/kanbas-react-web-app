@@ -35,6 +35,7 @@ function ModuleList() {
     const status = await client.updateModule(module);
     dispatch(updateModule(module));
   };
+
   useEffect(() => {
     findModulesForCourse(courseId)
       .then((modules) =>
@@ -90,7 +91,9 @@ function ModuleList() {
                     Edit
                   </button>
                   <button
-                    onClick={handleDeleteModule(module._id)}>
+                    onClick={() => handleDeleteModule(module._id)}
+                  >
+
                     Delete
                   </button>
                 <h4>{module.name}</h4>

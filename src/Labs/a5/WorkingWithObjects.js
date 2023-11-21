@@ -15,7 +15,7 @@ function WorkingWithObjects() {
       const fetchAssignment = async () => {
         const response = await axios.get(`${URL}`);
         setAssignment(response.data);
-      };
+      };    
       const updateTitle = async () => {
         const response = await axios
           .get(`${URL}/title/${assignment.title}`);
@@ -23,9 +23,8 @@ function WorkingWithObjects() {
       };
       useEffect(() => {
         fetchAssignment();
-      }, []);
+      }, []);    
     
-
   return (
     <div>
       <h3>Working With Objects</h3>
@@ -42,7 +41,7 @@ function WorkingWithObjects() {
         value={assignment.title}
         className="form-control mb-2 w-75"
         type="text" />
-    <button onClick={updateTitle}
+      <button onClick={updateTitle}
               className="w-100 btn btn-primary mb-2">
         Update Title to: {assignment.title}
       </button>

@@ -6,6 +6,7 @@ export const deleteModule = async (moduleId) => {
     .delete(`${MODULES_URL}/${moduleId}`);
   return response.data;
 };
+
 export const findModulesForCourse = async (courseId) => {
   const response = await axios
     .get(`${COURSES_URL}/${courseId}/modules`);
@@ -19,8 +20,9 @@ export const createModule = async (courseId, module) => {
    return response.data;
 };
 export const updateModule = async (module) => {
-const response = await axios.
-    put(`${MODULES_URL}/${module._id}`, module);
-return response.data;
+  const response = 
+  await axios.put(`${MODULES_URL}/${module._id}`, module);
+  return response.data;
 };
+
   

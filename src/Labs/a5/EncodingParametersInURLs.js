@@ -1,14 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 function EncodingParametersInURLs() {
   const [a, setA] = useState(34);
   const [b, setB] = useState(23);
-  const [welcome, setWelcome] = useState("");
-  const fetchWelcome = async () => {
-    const response = await axios.get("http://localhost:4000/a5/welcome");
-    setWelcome(response.data);
-  };
   const [result, setResult] = useState(0);
   const fetchSum = async (a, b) => {
     const response = await
@@ -21,12 +16,29 @@ function EncodingParametersInURLs() {
     setResult(response.data);
   };
 
+  const [welcome, setWelcome] = useState("");
+  const fetchWelcome = async () => {
+    const response = await axios.get("http://localhost:4000/a5/welcome");
+    setWelcome(response.data);
+  };
   useEffect(() => {
     fetchWelcome();
   }, []);
 
   return (
     <div>
+      <h3>Query Parameters</h3>
+      <a
+        href={`http://localhost:4000/a5/calculator?operation=add&a=${a}&b=${b}`}
+        className="btn btn-primary">
+        Add {a} + {b}
+      </a>
+      <a
+        href={`http://localhost:4000/a5/calculator?operation=subtract&a=${a}&b=${b}`}
+        className="btn btn-danger">
+        Substract {a} - {b}
+      </a>
+
       <h3>Encoding Parameters In URLs</h3>
       <h4>Integrating React with APIs</h4>
       <h5>Fetching Welcome</h5>

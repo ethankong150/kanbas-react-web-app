@@ -6,11 +6,10 @@ import './dashboard.css';
 function Dashboard({ courses, course, setCourse, addNewCourse,
   deleteCourse, updateCourse }
 ) {
-  
+  console.log(courses)
   return (
     <div className="main-content container">
       <h2>Dashboard</h2>
-
       <div style={{width: '25%'}}>
         <h5>Course</h5>
         <input value={course.name} className="form-control"
@@ -28,8 +27,6 @@ function Dashboard({ courses, course, setCourse, addNewCourse,
           Update
         </button>
       </div>
-     
-
       <hr />
       <h3 className="ml-3">Published Courses ({courses.length})</h3> 
       <hr />
