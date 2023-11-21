@@ -7,7 +7,7 @@ function Assignment5() {
     <div>
       <h1>Assignment 5</h1>
       <div className="list-group">
-        <a href="http://localhost:4000/a5/welcome"
+        <a href="https://kanbas-node-server-app-6h1f.onrender.com/a5/welcome"
            className="list-group-item">
           Welcome
         </a>
