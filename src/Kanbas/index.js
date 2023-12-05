@@ -6,7 +6,9 @@ import db from "./Database";
 import { useState, useEffect } from "react";
 import store from "./store";
 import { Provider } from "react-redux"
+import Signin from "../users/signin";
 import axios from "axios";
+import Account from "../users/account";
 
 function Kanbas() {
 
@@ -64,14 +66,16 @@ function Kanbas() {
         <div style={{ marginLeft: '100px' }}>
           <Routes>
             <Route path="/" element={            
-                <Dashboard
-                courses={courses}
-                course={course}
-                setCourse={setCourse}
-                addNewCourse={addNewCourse}
-                deleteCourse={deleteCourse}
-                updateCourse={updateCourse}/>} />
-            <Route path="Account" element={<h1>Account</h1>} />
+              <Dashboard
+              courses={courses}
+              course={course}
+              setCourse={setCourse}
+              addNewCourse={addNewCourse}
+              deleteCourse={deleteCourse}
+              updateCourse={updateCourse}/>} />
+            <Route path="Account" element={<Account />} />
+            {/* <Route path="Account" element={<h1>Account</h1>} /> */}
+            <Route path="SignIn" element={<Signin />} />
             <Route path="Dashboard" element={
                 <Dashboard
                 courses={courses}
